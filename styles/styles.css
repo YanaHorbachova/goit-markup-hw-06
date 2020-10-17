@@ -591,8 +591,10 @@ img {
   padding: 40px;
 
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: var(--white-collor);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .botton-close {
   position: absolute;
@@ -612,18 +614,17 @@ img {
 }
 
 /* FORM */
-.form {
+.form { 
   font-size: 14px;
   line-height: 1.71;
-  align-content: center;
-
+  justify-content: center;
+  text-align: center;
 }
 .modal-title {
   margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   color: var(--title-text-collor);
  }
  .form-list {  
@@ -632,20 +633,51 @@ img {
   flex-wrap: wrap;
   margin-top: 12px;
   margin-bottom: 20px;
+  text-align: left;
  }
  .form-list input,
  .form-list textarea {
   display: block;
   width: 448px;
   height: 40px;   
-  padding: 14px; 
+  padding: 14px;
+  padding-left: 42px; 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
- .form-list:not(:last-child){
+ .form-list input:not(:last-child){
   margin-bottom: 10px;
 }
 .form-list textarea {
   resize: none;
-  height: 120px;
+  height: 120px;     
+  padding: 16px 12px;    
  }
+ .form-list input:hover,
+ .form-list input:focus {
+    border: 1px solid var(--accent-collor);
+  }
+  .form-list textarea:hover,
+  .form-list textarea:focus {    
+    border: 1px solid var(--accent-collor);
+  }
+  .form-item {
+    position: relative;
+  }
+  .form-item svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .form-item input:hover + svg,
+  .form-item input:focus + svg {
+    fill: var(--accent-collor);
+
+  }
+  .user-conditions {
+    margin-bottom: 30px;
+  }
