@@ -290,7 +290,7 @@
   <div class="blakdrop is-hidden" data-modal>
     <div class="modal">
       <button class="botton-close" data-modal-close> &#10006;</button>
-      <form action="" class="form">
+      <form action="" class="form" autocomplete="off">
         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
         <div class="form-list">
 
@@ -325,10 +325,13 @@
           
         </div>        
         
-        <div class="user-conditions">
-          <input type="checkbox" name="user-conditions" id="conditions"> 
-          <label for="conditions">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-        </div>
+                  
+        <label class="user-conditions">
+         <input class="checkbox" type="checkbox" name="user-conditions">
+         <span class="icon"> </span> 
+          Соглашаюсь с рассылкой и принимаю <a href=""> Условия договора</a>
+        </label>
+        
 
         <button type="submit" class="button primary">Отправить</button>
 
