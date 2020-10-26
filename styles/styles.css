@@ -710,6 +710,8 @@ img {
   }
   .user-conditions a {
     margin-left: 2px;
+    color: var(--accent-collor);
+    text-decoration: underline;
   }
   .form .button {
     width: 200px;
